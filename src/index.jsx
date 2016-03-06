@@ -9,12 +9,14 @@ var CommentsPage = require('./PagesComponent/Comments');
 var TopMenu = require('./NavigationComponents/TopMenu');
 var IndexRoute = require('react-router').IndexRoute;
 var IndexPage = require('./PagesComponent/Index');
+var DivComponentsPage = require('./PagesComponent/DivComponentsPage');
 
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={MainPage}>
       <IndexRoute component={IndexPage}/>
       <Route path="/comments" component={CommentsPage}/>
+      <Route path="/div-component" component={DivComponentsPage} />
     </Route>
   </Router>
 ), document.getElementById('container'));

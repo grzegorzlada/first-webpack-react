@@ -13,19 +13,13 @@ var TopMenu = React.createClass({
           <li>
             <Link to="/comments">Comments</Link>
           </li>
-          {this.testFunction('xyz')}
+          <li>
+            <Link to="/div-component">Div Components</Link>
+          </li>
         </ul>
       </div>
     )
   },
-
-  testFunction: function(text) {
-    return (
-      <li>{text}
-      </li>
-    )
-  }
-
 });
 
 module.exports = TopMenu;
