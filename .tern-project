@@ -5,20 +5,6 @@
     "jquery"
   ],
   "loadEagerly": [
-    "src/**/*.js"
-  ],
-  "dontLoad": [
-  ],
-  "plugins": {
-    "complete_strings": {},
-    "node": {},
-    "lint": {},
-    "angular": {},
-    "requirejs": {},
-    "modules": {},
-    "es_modules": {},
-    "doc_comment": {
-      "fullDocs": true
-    }
-  }
+    "/src/**/*.js"
+  ]
 }
