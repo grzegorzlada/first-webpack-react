@@ -1,8 +1,10 @@
+var CommentBox = require('../Components/CommentBox');
+
 var Comments = React.createClass({
   render: function() {
     return (
         <div>
-          This is comments page!
+          <CommentBox />
         </div>
     );
   }
