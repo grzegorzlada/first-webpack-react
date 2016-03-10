@@ -1,5 +1,6 @@
 var CommentForm = require('./CommentForm');
 var CommentList = require('./CommentList');
+var _ = require('lodash');
 
 var CommentBox = React.createClass({
 
@@ -8,8 +9,28 @@ var CommentBox = React.createClass({
     {id: 2, author: 'Janek', 'text': 'My second comment'}
   ],
 
-  addNewCommentHandler: function(comment) {
-    this.sampleData.push(comment);
+  getInitialState: function() {
+    return {
+      data: this.sampleData
+    };
+  },
+
+  addNewCommentHandler: function(text, author) {
+    var newId = this.getNewIdForComment();
+    var newComment = {
+      id: newId,
+      author: author,
+      text: text
+    };
+
+    this.setState(function(previousState, currentProps){
+      return previousState.data.push(newComment);
+    });
+  },
+
+  getNewIdForComment: function() {
+    var ids = _.map(this.state.data, 'id');
+    return _.max(ids) + 1;
   },
 
   render: function() {
@@ -17,7 +38,7 @@ var CommentBox = React.createClass({
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentForm addNewCommentListener={this.addNewCommentHandler} />
-        <CommentList data={this.sampleData}/>
+        <CommentList data={this.state.data}/>
       </div>
     );
   }
