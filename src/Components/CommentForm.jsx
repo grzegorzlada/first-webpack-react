@@ -1,9 +1,13 @@
 var React = require('React');
 
+window.commentFormState = {
+  defaultFormText: 'Enter comment'
+};
+
 var CommentForm = React.createClass({
 
   getInitialState: function() {
-    return {comment: 'Enter comment...'};
+    return {comment: window.commentFormState.defaultFormText};
   },
 
   addNewComment: function() {
@@ -23,6 +27,10 @@ var CommentForm = React.createClass({
         <button onClick={this.addNewComment}>Add new comment!</button>
       </div>
     );
+  },
+
+  componentWillUnmount: function() {
+    window.commentFormState.defaultFormText = this.state.comment;
   }
 });
 
