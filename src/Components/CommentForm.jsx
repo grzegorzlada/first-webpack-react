@@ -1,9 +1,9 @@
+var React = require('React');
+
 var CommentForm = React.createClass({
 
   getInitialState: function() {
-    return {
-      comment: 'Enter comment...'
-    }
+    return {comment: 'Enter comment...'};
   },
 
   addNewComment: function() {
@@ -22,7 +22,7 @@ var CommentForm = React.createClass({
         <textarea value={this.state.comment} onChange={this.updateComment}></textarea>
         <button onClick={this.addNewComment}>Add new comment!</button>
       </div>
-    )
+    );
   }
 });
 

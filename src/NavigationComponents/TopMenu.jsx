@@ -1,4 +1,3 @@
-var Router = require('react-router').Router;
 var Link = require('react-router').Link;
 var React = require('react');
 
@@ -19,7 +18,7 @@ var TopMenu = React.createClass({
         </ul>
       </div>
     )
-  },
+  }
 });
 
 module.exports = TopMenu;

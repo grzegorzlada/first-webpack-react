@@ -1,3 +1,5 @@
+var React = require('React');
+
 var Modal = React.createClass({
   render: function() {
     return (
@@ -26,7 +28,7 @@ var Modal = React.createClass({
           </div>
         </div>
       </div>
-    )
+    );
   }
 });
 

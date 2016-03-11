@@ -1,5 +1,5 @@
-React = require('react');
-ReactDOM = require('react-dom');
+var React = require('react');
+var ReactDOM = require('react-dom');
 var Router = require('react-router').Router;
 var Route = require('react-router').Route;
 var hashHistory = require('react-router').hashHistory;
@@ -11,10 +11,10 @@ var DivComponentsPage = require('./PagesComponent/DivComponentsPage');
 
 ReactDOM.render((
   <Router history={hashHistory}>
-    <Route path="/" component={MainPage}>
+    <Route component={MainPage} path="/">
       <IndexRoute component={IndexPage}/>
-      <Route path="/comments" component={CommentsPage}/>
-      <Route path="/div-component" component={DivComponentsPage} />
+      <Route component={CommentsPage} path="/comments"/>
+      <Route component={DivComponentsPage} path="/div-component"/>
     </Route>
   </Router>
 ), document.getElementById('container'));
