@@ -1,5 +1,5 @@
 import TopMenu from '../NavigationComponents/TopMenu';
-import React from 'React';
+import React from 'react';
 
 var MainPage = React.createClass({
   render: function() {

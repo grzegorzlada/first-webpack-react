@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 
 var Modal = React.createClass({
   render: function() {

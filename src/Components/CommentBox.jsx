@@ -1,7 +1,7 @@
 import CommentForm from './CommentForm';
 import CommentList from './CommentList';
 import _ from 'lodash';
-import React from 'React';
+import React from 'react';
 
 var CommentBox = React.createClass({
 

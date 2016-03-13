@@ -1,5 +1,5 @@
 import Comment from './Comment';
-import React from 'React';
+import React from 'react';
 
 var CommentList = React.createClass({
 

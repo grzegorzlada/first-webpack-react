@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 
 var DivComponent = React.createClass({
   getButtonLabel: function() {
