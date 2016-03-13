@@ -1,13 +1,10 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Router = require('react-router').Router;
-var Route = require('react-router').Route;
-var hashHistory = require('react-router').hashHistory;
-var MainPage = require('./PagesComponent/Main');
-var CommentsPage = require('./PagesComponent/Comments');
-var IndexRoute = require('react-router').IndexRoute;
-var IndexPage = require('./PagesComponent/Index');
-var DivComponentsPage = require('./PagesComponent/DivComponentsPage');
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MainPage from './PagesComponent/MainPage';
+import CommentsPage from './PagesComponent/CommentsPage';
+import IndexPage from './PagesComponent/IndexPage';
+import DivComponentsPage from './PagesComponent/DivComponentsPage';
 
 ReactDOM.render((
   <Router history={hashHistory}>

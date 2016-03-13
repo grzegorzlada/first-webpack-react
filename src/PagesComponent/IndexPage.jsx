@@ -1,6 +1,6 @@
-var React = require('React');
+import React from 'react';
 
-var Index = React.createClass({
+var IndexPage = React.createClass({
   render: function() {
     return (
       <strong>Hello from MainPage!</strong>
@@ -8,4 +8,4 @@ var Index = React.createClass({
   }
 });
 
-module.exports = Index;
+export default IndexPage;

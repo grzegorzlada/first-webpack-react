@@ -1,5 +1,5 @@
-var Comment = require('./Comment');
-var React = require('React');
+import Comment from './Comment';
+import React from 'React';
 
 var CommentList = React.createClass({
 
@@ -22,4 +22,4 @@ var CommentList = React.createClass({
   }
 });
 
-module.exports = CommentList;
+export default CommentList;

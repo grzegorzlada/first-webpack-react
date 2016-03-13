@@ -1,6 +1,6 @@
-var DivComponent = require('../Components/DivComponent');
-var Modal = require('../Components/Modal');
-var React = require('React');
+import DivComponent from '../Components/DivComponent';
+import Modal from '../Components/Modal';
+import React from 'react';
 
 var DivComponentsPage = React.createClass({
   childClick: function() {
@@ -33,4 +33,4 @@ var DivComponentsPage = React.createClass({
   }
 });
 
-module.exports = DivComponentsPage;
+export default DivComponentsPage;

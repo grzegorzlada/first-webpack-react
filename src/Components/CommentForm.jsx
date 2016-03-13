@@ -1,13 +1,12 @@
-var React = require('React');
+import React from 'React';
+import CommentsState from '../StateClasses/CommentsState';
 
-window.commentFormState = {
-  defaultFormText: 'Enter comment'
-};
+window.commentState = new CommentsState();
 
 var CommentForm = React.createClass({
 
   getInitialState: function() {
-    return {comment: window.commentFormState.defaultFormText};
+    return {comment: window.commentState.commentText};
   },
 
   addNewComment: function() {
@@ -30,8 +29,8 @@ var CommentForm = React.createClass({
   },
 
   componentWillUnmount: function() {
-    window.commentFormState.defaultFormText = this.state.comment;
+    window.commentState.commentText = this.state.comment;
   }
 });
 
-module.exports = CommentForm;
+export default CommentForm;

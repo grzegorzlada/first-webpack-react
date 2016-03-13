@@ -1,4 +1,4 @@
-var React = require('React');
+import React from 'React';
 
 var Comment = React.createClass({
   render: function() {
@@ -11,4 +11,4 @@ var Comment = React.createClass({
   }
 });
 
-module.exports = Comment;
+export default Comment;

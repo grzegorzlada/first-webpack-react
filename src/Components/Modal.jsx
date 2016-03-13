@@ -1,4 +1,4 @@
-var React = require('React');
+import React from 'React';
 
 var Modal = React.createClass({
   render: function() {
@@ -32,4 +32,4 @@ var Modal = React.createClass({
   }
 });
 
-module.exports = Modal;
+export default Modal;

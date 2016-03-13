@@ -1,7 +1,7 @@
-var TopMenu = require('../NavigationComponents/TopMenu');
-var React = require('React');
+import TopMenu from '../NavigationComponents/TopMenu';
+import React from 'React';
 
-var Main = React.createClass({
+var MainPage = React.createClass({
   render: function() {
     return (
       <div>
@@ -60,8 +60,8 @@ var Main = React.createClass({
           </div>
         </div>
       </div>
-    )
+    );
   }
 });
 
-module.exports = Main;
+export default MainPage;

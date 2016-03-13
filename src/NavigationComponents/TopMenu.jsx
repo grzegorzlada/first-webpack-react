@@ -1,5 +1,5 @@
-var Link = require('react-router').Link;
-var React = require('react');
+import {Link} from 'react-router';
+import React from 'react';
 
 var TopMenu = React.createClass({
   render: function() {
@@ -17,8 +17,8 @@ var TopMenu = React.createClass({
           </li>
         </ul>
       </div>
-    )
+    );
   }
 });
 
-module.exports = TopMenu;
+export default TopMenu;

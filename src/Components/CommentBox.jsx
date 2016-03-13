@@ -1,7 +1,7 @@
-var CommentForm = require('./CommentForm');
-var CommentList = require('./CommentList');
-var _ = require('lodash');
-var React = require('React');
+import CommentForm from './CommentForm';
+import CommentList from './CommentList';
+import _ from 'lodash';
+import React from 'React';
 
 var CommentBox = React.createClass({
 
@@ -50,4 +50,4 @@ var CommentBox = React.createClass({
   }
 });
 
-module.exports = CommentBox;
+export default CommentBox;

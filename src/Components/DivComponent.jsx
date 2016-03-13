@@ -1,4 +1,4 @@
-var React = require('React');
+import React from 'React';
 
 var DivComponent = React.createClass({
   getButtonLabel: function() {
@@ -44,4 +44,4 @@ var DivComponent = React.createClass({
   }
 });
 
-module.exports = DivComponent;
+export default DivComponent;
