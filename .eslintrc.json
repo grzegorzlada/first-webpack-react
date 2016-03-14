@@ -209,9 +209,7 @@
     "semi": 2,
     "semi-spacing": 1,
     "sort-vars": 0,
-    "sort-imports": 1,
     "space-before-blocks": 1,
-    "space-before-function-paren": 1,
     "space-in-parens": 1,
     "space-infix-ops": 1,
     "space-unary-ops": 1,
@@ -244,7 +242,6 @@
     "react/require-extension": 1,
     "react/self-closing-comp": 1,
     "react/sort-comp": 1,
-    "react/sort-prop-types": 1,
     "react/wrap-multilines": 1,
     "react/jsx-boolean-value": 1,
     "react/jsx-closing-bracket-location": 1,
@@ -259,10 +256,8 @@
     ],
     "react/jsx-no-bind": 0,
     "react/jsx-no-duplicate-props": 1,
-    "react/jsx-no-literals": 1,
     "react/jsx-no-undef": 1,
     "react/jsx-pascal-case": 1,
-    "react/jsx-sort-props": 1,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1
   }

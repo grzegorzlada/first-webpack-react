@@ -1,7 +1,12 @@
 import React from 'react';
 
-var Modal = React.createClass({
-  render: function() {
+const Modal = React.createClass({
+
+  propTypes: {
+    body: React.PropTypes.string.isRequired
+  },
+
+  render() {
     return (
       <div>
         <button type="button" className="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">

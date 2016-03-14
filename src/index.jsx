@@ -1,4 +1,4 @@
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MainPage from './PagesComponent/MainPage';

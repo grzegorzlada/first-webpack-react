@@ -26,7 +26,7 @@ var DivComponentsPage = React.createClass({
           </DivComponent>
         </div>
         <div className="col-md-6">
-          <Modal/>
+          <Modal body="Hello from property!"/>
         </div>
       </div>
     );

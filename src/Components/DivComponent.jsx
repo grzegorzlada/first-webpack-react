@@ -1,34 +1,44 @@
 import React from 'react';
 
-var DivComponent = React.createClass({
-  getButtonLabel: function() {
-    return this.props.buttonLabel === undefined
-      ? "Click me!"
+const DivComponent = React.createClass({
+
+  propTypes: {
+    buttonLabel: React.PropTypes.string,
+    simple: React.PropTypes.number,
+    complex: React.PropTypes.object,
+    onClickHandler: React.PropTypes.func,
+    startText: React.PropTypes.string.isRequired,
+    endText: React.PropTypes.string.isRequired,
+    children: React.PropTypes.oneOfType([
+      React.PropTypes.object,
+      React.PropTypes.array
+    ])
+  },
+
+  getButtonLabel() {
+    return typeof this.props.buttonLabel === 'undefined'
+      ? 'Click me!'
       : this.props.buttonLabel;
   },
 
-  onButtonClick: function(e) {
+  onButtonClick(e) {
     alert('Clicked!');
 
-    if (this.props.simple !== undefined) {
+    if (typeof this.props.simple !== 'undefined') {
       this.props.simple *= 2;
     }
 
-    if (this.props.complex !== undefined) {
+    if (typeof this.props.complex !== 'undefined') {
       this.props.complex.a *= 2;
       this.props.complex.b *= 2;
     }
 
-    if (this.props.onClickHandler !== undefined) {
+    if (typeof this.props.onClickHandler !== 'undefined') {
       this.props.onClickHandler(e);
     }
   },
 
-  componentWillUnmount: function() {},
-
-  componentDidMount: function() {},
-
-  render: function() {
+  render() {
     return (
       <div>
         <div>

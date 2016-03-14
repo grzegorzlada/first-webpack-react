@@ -1,10 +1,14 @@
 import Comment from './Comment';
 import React from 'react';
 
-var CommentList = React.createClass({
+const CommentList = React.createClass({
 
-  getCommentNodes: function() {
-    var comments = this.props.data.map(function(comment) {
+  propTypes: {
+    data: React.PropTypes.array.isRequired
+  },
+
+  getCommentNodes() {
+    const comments = this.props.data.map(function(comment) {
       return (
         <Comment author={comment.author} key={comment.id}>{comment.text}</Comment>
       );
@@ -13,7 +17,7 @@ var CommentList = React.createClass({
     return comments;
   },
 
-  render: function() {
+  render() {
     return (
       <div className="commentList">
         {this.getCommentNodes()}

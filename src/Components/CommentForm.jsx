@@ -3,33 +3,37 @@ import CommentsState from '../StateClasses/CommentsState';
 
 window.commentState = new CommentsState();
 
-var CommentForm = React.createClass({
+const CommentForm = React.createClass({
 
-  getInitialState: function() {
+  propTypes: {
+    addNewCommentListener: React.PropTypes.func
+  },
+
+  getInitialState() {
     return {comment: window.commentState.commentText};
   },
 
-  addNewComment: function() {
-    if (this.props.addNewCommentListener !== undefined) {
+  componentWillUnmount() {
+    window.commentState.commentText = this.state.comment;
+  },
+
+  addNewComment() {
+    if (typeof this.props.addNewCommentListener !== 'undefined') {
       this.props.addNewCommentListener(this.state.comment, 'Ziomeczek');
     }
   },
 
-  updateComment: function(e) {
+  updateComment(e) {
     this.setState({comment: e.target.value});
   },
 
-  render: function() {
+  render() {
     return (
       <div className="commentForm">
         <textarea value={this.state.comment} onChange={this.updateComment}></textarea>
         <button onClick={this.addNewComment}>Add new comment!</button>
       </div>
     );
-  },
-
-  componentWillUnmount: function() {
-    window.commentState.commentText = this.state.comment;
   }
 });
 

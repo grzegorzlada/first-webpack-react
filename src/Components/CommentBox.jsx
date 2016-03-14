@@ -3,7 +3,11 @@ import CommentList from './CommentList';
 import _ from 'lodash';
 import React from 'react';
 
-var CommentBox = React.createClass({
+const CommentBox = React.createClass({
+
+  getInitialState() {
+    return {data: this.sampleData};
+  },
 
   sampleData: [
     {
@@ -17,16 +21,12 @@ var CommentBox = React.createClass({
     }
   ],
 
-  getInitialState: function() {
-    return {data: this.sampleData};
-  },
-
-  addNewCommentHandler: function(text, author) {
-    var newId = this.getNewIdForComment();
-    var newComment = {
-      id: newId,
-      author: author,
-      text: text
+  addNewCommentHandler(text, author) {
+    const id = this.getNewIdForComment();
+    const newComment = {
+      id,
+      author,
+      text
     };
 
     this.setState(function(previousState) {
@@ -34,12 +34,12 @@ var CommentBox = React.createClass({
     });
   },
 
-  getNewIdForComment: function() {
-    var ids = _.map(this.state.data, 'id');
+  getNewIdForComment() {
+    const ids = _.map(this.state.data, 'id');
     return _.max(ids) + 1;
   },
 
-  render: function() {
+  render() {
     return (
       <div className="commentBox">
         <h1>Comments</h1>
