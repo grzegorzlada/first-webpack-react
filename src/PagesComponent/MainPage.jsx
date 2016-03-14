@@ -1,8 +1,13 @@
 import TopMenu from '../NavigationComponents/TopMenu';
 import React from 'react';
 
-var MainPage = React.createClass({
-  render: function() {
+const MainPage = React.createClass({
+
+  propTypes: {
+    children: React.PropTypes.object.isRequired
+  },
+
+  render() {
     return (
       <div>
         <div className="navbar navbar-inverse navbar-fixed-top" role="navigation">

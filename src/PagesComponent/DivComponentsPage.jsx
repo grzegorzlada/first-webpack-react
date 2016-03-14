@@ -2,9 +2,9 @@ import DivComponent from '../Components/DivComponent';
 import Modal from '../Components/Modal';
 import React from 'react';
 
-var DivComponentsPage = React.createClass({
-  childClick: function() {
-    alert('Child has been clicked! simple=' + this.simpleVar + ', complex a=' + this.complexVar.a + ', b=' + this.complexVar.b);
+const DivComponentsPage = React.createClass({
+  childClick() {
+    alert('Child has been clicked! simple= ${this.simpleVar}, complex a=${this.complexVar.a}, b=${this.complexVar.b}');
   },
 
   simpleVar: 5,
@@ -14,7 +14,7 @@ var DivComponentsPage = React.createClass({
     b: 3
   },
 
-  render: function() {
+  render() {
     return (
       <div className="row">
         <div className="col-md-6">

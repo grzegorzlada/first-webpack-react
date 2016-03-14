@@ -1,8 +1,8 @@
 import {Link} from 'react-router';
 import React from 'react';
 
-var TopMenu = React.createClass({
-  render: function() {
+const TopMenu = React.createClass({
+  render() {
     return (
       <div className="collapse navbar-collapse appiNav">
         <ul className="nav navbar-nav">

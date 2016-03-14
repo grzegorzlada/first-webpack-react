@@ -1,7 +1,7 @@
 import React from 'react';
 
-var IndexPage = React.createClass({
-  render: function() {
+const IndexPage = React.createClass({
+  render() {
     return (
       <strong>Hello from MainPage!</strong>
     );
